@@ -1,0 +1,23 @@
+.table {
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.table thead th{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: var(--blue);
+}
+
+.badge {
+    padding: 0.125em 0.65em;
+    border-radius: 62.4365em;
+    background: var(--gray-400);
+    color: var(--gray-200);
+    font-weight: 700;
+    font-size: 0.75rem;
+    line-height: 0.93rem;
+    margin-left: 0.5rem;
+}
