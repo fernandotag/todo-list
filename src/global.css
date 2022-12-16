@@ -24,4 +24,5 @@ body {
   background: var(--gray-600);
   color: var(--gray-100);
   -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', sans-serif;
 }

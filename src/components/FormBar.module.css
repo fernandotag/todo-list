@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: calc((var(--input-height) / 2) * -1);
+    font-family: 'Inter', sans-serif;
 }
 
 .form input {
@@ -16,6 +17,7 @@
     font-size: 1rem;
     line-height: 22.4;
     padding: 1rem;
+    font-family: 'Inter', sans-serif;
 }
 
 .form button[type="submit"] {
@@ -28,4 +30,5 @@
     font-weight: 700;
     font-size: 0.875rem;
     line-height: 1.225rem;
+    font-family: 'Inter', sans-serif;
 }
