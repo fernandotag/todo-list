@@ -10,7 +10,7 @@
   --purpre: #8284FA;
   --purple-dark: #5E60CE;
   --blue: #4EA8DE;
-  --blue-dark: 1E6F9F;
+  --blue-dark: #1E6F9F;
   --danger: E25858;
 }
 
@@ -18,4 +18,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background: var(--gray-600);
+  color: var(--gray-100);
+  -webkit-font-smoothing: antialiased;
 }

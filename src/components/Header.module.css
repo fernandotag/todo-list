@@ -2,8 +2,8 @@
     background: var(--gray-700);
     display: flex;
     justify-content: center;
-    padding-top: 72px;
-    height: 200px;
+    padding-top: 4.5rem;
+    height: 12.5rem;
 }
 
 .header img {
