@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
+import { Header } from './components/Header'
+import './global.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="App">
-      <h1>To-do List</h1>
+    <div>
+      <Header></Header>
     </div>
   )
 }
