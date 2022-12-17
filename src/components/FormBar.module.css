@@ -16,6 +16,7 @@
     font: 400 1rem 'Inter', sans-serif;
     line-height: 1.4;
     padding: 1rem;
+    background: var(--gray-500);
 }
 
 .form button[type="submit"] {
