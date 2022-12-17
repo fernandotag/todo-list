@@ -3,11 +3,16 @@ import { TaskRow } from './TaskRow';
 import styles from './TaskTable.module.css';
 
 interface ITaskTableProps {
-    tasks: ITask[]
+    tasks: ITask[];
+    onSelect: (taskId: string) => void;
 }
 
-export function TaskTable({tasks}: ITaskTableProps) {
+export function TaskTable({tasks, onSelect}: ITaskTableProps) {
     const totalCreatedTasked = 5;
+
+    function onSelectTaskProps(taskId: string) {
+        onSelect(taskId);
+    }
 
     return (
         <table className={styles.table}>
@@ -30,6 +35,7 @@ export function TaskTable({tasks}: ITaskTableProps) {
             <tbody>
                 {tasks.map(({ id, title, isDone }: ITask) => (
                     <TaskRow 
+                        onSelect={onSelectTaskProps}
                         key={id}
                         taskId={id} 
                         title={title}
