@@ -1,0 +1,59 @@
+.task {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0px 2px 8px rgba(224, 5, 5, 0.06);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 400;
+}
+
+.trash {
+  color: var(--gray-300);
+  cursor: pointer;
+}
+
+.trash:hover {
+  color: var(--danger);
+}
+
+.rowTaskToggle,
+.rowTaskToggleSelected {
+  margin: 0.16rem;
+  width: 1.09rem;
+  height: 1.09rem;
+  cursor: pointer;
+  border-radius: 999rem;
+}
+
+.rowTaskToggle {
+  border: 2px solid var(--blue);
+  background: none;
+}
+
+.rowTaskToggle:hover {
+  border: 2px solid var(--purple-dark);
+}
+
+.rowTaskToggleSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-100);
+  border: 3px solid var(--purple-dark);
+  background: var(--purple-dark);
+}
+
+.rowTaskToggleSelected:hover {
+  border: 3px solid var(--blue);
+  background: var(--blue);
+}
+
+.rowSelected {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
