@@ -17,7 +17,7 @@ export function TaskRow({taskId, title, isDone}: ITaskRowProps) {
                 }
             >{isDone ? <Check size={24} weight="bold"></Check> : null}</button>
             </td>
-            <td>{title}</td>
+            <td className={isDone ? styles.rowSelected : ''}>{title}</td>
             <td><a href="#" className={styles.trash}><Trash size={15} weight="bold"></Trash></a></td>
         </tr>
     )
