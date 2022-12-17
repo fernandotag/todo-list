@@ -13,12 +13,21 @@
 }
 
 .trash {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
   color: var(--gray-300);
   cursor: pointer;
 }
 
 .trash:hover {
   color: var(--danger);
+  background: var(--gray-400);
+  border-radius: 4px;
+  transition: background-color 0.1s;
 }
 
 .rowTaskToggle,
@@ -31,12 +40,14 @@
 }
 
 .rowTaskToggle {
-  border: 2px solid var(--blue);
+  border: 1.99px solid var(--blue);
   background: none;
 }
 
 .rowTaskToggle:hover {
-  border: 2px solid var(--purple-dark);
+  border: 1.99px solid var(--blue-dark);
+  background: rgba(30, 111, 159, .2);
+  transition: background-color 0.1s;
 }
 
 .rowTaskToggleSelected {
@@ -49,8 +60,9 @@
 }
 
 .rowTaskToggleSelected:hover {
-  border: 3px solid var(--blue);
-  background: var(--blue);
+  border: 3px solid var(--purple);
+  background: var(--purple);
+  transition: background-color 0.1s;
 }
 
 .rowSelected {
