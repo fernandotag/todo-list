@@ -19,7 +19,20 @@
     background: var(--gray-500);
 }
 
+.plusIcon {
+    box-sizing: border-box;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    border-radius: 999rem;
+    padding: 2px;
+    border: 1.5px solid var(--gray-100);
+}
+
 .form button[type="submit"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     flex-basis: 5.625rem;
     padding: 1rem;
     border: 0;
