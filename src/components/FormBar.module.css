@@ -14,7 +14,7 @@
     border: 1px solid #0D0D0D;
     border-radius: 8px;
     font: 400 1rem 'Inter', sans-serif;
-    line-height: 22.4;
+    line-height: 1.4;
     padding: 1rem;
 }
 
@@ -26,7 +26,7 @@
     background: var(--blue-dark);
     color: var(--gray-100);
     font: 700 0.875rem  'Inter', sans-serif;
-    line-height: 1.225rem;
+    line-height: 1.4;
 }
 
 @media (max-width: 768px) {
