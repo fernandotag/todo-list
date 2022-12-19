@@ -26,6 +26,8 @@
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: transparent;
+  border: 0;
   width: 24px;
   height: 24px;
   color: var(--gray-300);

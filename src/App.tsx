@@ -25,9 +25,6 @@ function App() {
 
   function sortByIsDone(tasks: ITask[]) {
     return tasks.sort((a, b) => {
-      console.log(a.title);
-      console.log(b.title);
-      console.log(Number(a.isDone) - Number(b.isDone));
       return Number(a.isDone) - Number(b.isDone)
     })
   }
@@ -40,13 +37,18 @@ function App() {
     setTasks(sortByIsDone(newTasksArray));
   }
 
+  function deleteTask(taskId: string) {
+    const newTasksArray = tasks.filter((task: ITask) => task.id !== taskId);
+    setTasks(newTasksArray);
+  }
+
   return (
     <div>
       <Header />
       <div className={styles.wrapper}>
         <main className={styles.main}>
           <FormBar />
-          <TaskTable tasks={tasks} onSelect={selectTask} />
+          <TaskTable tasks={tasks} onSelect={selectTask} onDelete={deleteTask} />
         </main>
       </div>
     </div>
