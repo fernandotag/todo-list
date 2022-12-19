@@ -1,6 +1,8 @@
+import { ClipboardText } from 'phosphor-react';
 import { ITask } from '../App';
 import { TaskRow } from './TaskRow';
 import styles from './TaskTable.module.css';
+import clipboardIcon from '../assets/clipboard.svg';
 
 interface ITaskTableProps {
     tasks: ITask[];
@@ -8,7 +10,7 @@ interface ITaskTableProps {
     onDelete: (taskId: string) => void;
 }
 
-export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
+export function TaskTable({ tasks, onSelect, onDelete }: ITaskTableProps) {
     const totalCreatedTasks = tasks.length;
     const totalDoneTasks = tasks.filter(task => task.isDone).length;
 
@@ -41,16 +43,26 @@ export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
                 </tr>
             </thead>
             <tbody>
-                {tasks.map(({ id, title, isDone }: ITask) => (
-                    <TaskRow 
-                        key={id}
-                        taskId={id} 
-                        title={title}
-                        isDone={isDone}
-                        onSelect={onSelectTaskProps}
-                        onDelete={onDeleteTaskProps}
-                    />
-                ))}
+                {tasks.length === 0 ? (
+                    <div className={styles.emptyList}>
+                        <img src={clipboardIcon} />
+                        <p>
+                            <strong>You don't have any tasks registered yet.</strong><br />
+                            Create tasks and organize your to-do items
+                        </p>
+                    </div>
+                ) : (
+                    tasks.map(({ id, title, isDone }: ITask) => (
+                        <TaskRow
+                            key={id}
+                            taskId={id}
+                            title={title}
+                            isDone={isDone}
+                            onSelect={onSelectTaskProps}
+                            onDelete={onDeleteTaskProps}
+                        />
+                    ))
+                )}
             </tbody>
         </table>
     )
