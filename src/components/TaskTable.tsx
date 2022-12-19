@@ -9,7 +9,7 @@ interface ITaskTableProps {
 }
 
 export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
-    const totalCreatedTasked = 5;
+    const totalCreatedTasked = tasks.length;
 
     function onSelectTaskProps(taskId: string) {
         onSelect(taskId);
