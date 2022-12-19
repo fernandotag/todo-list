@@ -5,13 +5,18 @@ import styles from './TaskTable.module.css';
 interface ITaskTableProps {
     tasks: ITask[];
     onSelect: (taskId: string) => void;
+    onDelete: (taskId: string) => void;
 }
 
-export function TaskTable({tasks, onSelect}: ITaskTableProps) {
+export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
     const totalCreatedTasked = 5;
 
     function onSelectTaskProps(taskId: string) {
         onSelect(taskId);
+    }
+
+    function onDeleteTaskProps(taskId: string) {
+        onDelete(taskId);
     }
 
     return (
@@ -35,11 +40,12 @@ export function TaskTable({tasks, onSelect}: ITaskTableProps) {
             <tbody>
                 {tasks.map(({ id, title, isDone }: ITask) => (
                     <TaskRow 
-                        onSelect={onSelectTaskProps}
                         key={id}
                         taskId={id} 
                         title={title}
                         isDone={isDone}
+                        onSelect={onSelectTaskProps}
+                        onDelete={onDeleteTaskProps}
                     />
                 ))}
             </tbody>
