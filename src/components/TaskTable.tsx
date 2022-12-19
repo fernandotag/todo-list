@@ -9,7 +9,8 @@ interface ITaskTableProps {
 }
 
 export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
-    const totalCreatedTasked = tasks.length;
+    const totalCreatedTasks = tasks.length;
+    const totalDoneTasks = tasks.filter(task => task.isDone).length;
 
     function onSelectTaskProps(taskId: string) {
         onSelect(taskId);
@@ -27,11 +28,13 @@ export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
                         <div>
                             <div>
                                 <span>Tarefas Criadas</span>
-                                <span className={styles.badge}>{totalCreatedTasked}</span>
+                                <span className={styles.badge}>{totalCreatedTasks}</span>
                             </div>
                             <div>
                                 <span>Concluídas</span>
-                                <span className={styles.badge}>2 de 5</span>
+                                <span className={styles.badge}>
+                                    {`${totalDoneTasks} de ${totalCreatedTasks}`}
+                                </span>
                             </div>
                         </div>
                     </th>
