@@ -22,6 +22,7 @@
 .form input:focus {
     border: 1px solid var(--purple-dark);
     transition: background-color 0.1s;
+    color: var(--gray-100);
 }
 
 .plusIcon {
@@ -60,5 +61,8 @@
 
     .form button[type="submit"] {
         flex-basis: auto;
+        display: flex;
+        justify-content: center;
+        gap: 0.5rem;
     }
 }

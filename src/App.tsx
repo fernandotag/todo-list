@@ -18,17 +18,23 @@ const tasksMock: ITask[] = [
     id: uuidv4(),
     title: "Buy milk.",
     isDone: false,
-    createdAt: new Date('2022-05-03 20:00:00')
+    createdAt: new Date('2022-01-03 20:00:00')
+  },
+  {
+    id: uuidv4(),
+    title: "Send report to Bill",
+    isDone: false,
+    createdAt: new Date('2022-02-03 20:00:00')
   },
   {
     id: uuidv4(),
     title: "Pay the bill",
     isDone: false,
-    createdAt: new Date('2022-01-03 20:00:00')
+    createdAt: new Date('2022-02-03 09:00:00')
   },
   {
     id: uuidv4(),
-    title: "Pay the taxes",
+    title: "Pick up groceries",
     isDone: false,
     createdAt: new Date('2022-07-03 20:00:00')
   },

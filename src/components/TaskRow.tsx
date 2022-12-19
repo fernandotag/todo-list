@@ -21,12 +21,13 @@ export function TaskRow({taskId, title, isDone, onSelect, onDelete}: ITaskRowPro
     return (
         <tr className={styles.task}>
             <td>
-            <button 
-                className={
-                    isDone ? styles.rowTaskToggleSelected : styles.rowTaskToggle
-                }
-                onClick={handleSelectTask}
-            >{isDone ? <Check size={24} weight="bold"></Check> : null}</button>
+                <button 
+                    className={
+                        isDone ? styles.rowTaskToggleSelected : styles.rowTaskToggle
+                    }
+                    onClick={handleSelectTask}>
+                    {isDone ? <Check size={24} weight="bold"></Check> : null}
+                </button>
             </td>
             <td className={isDone ? styles.titleSelected : styles.title}>{title}</td>
             <td><button className={styles.trash} onClick={handleDeleteTask}>
