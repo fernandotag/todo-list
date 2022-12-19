@@ -10,7 +10,7 @@ interface ITaskTableProps {
     onDelete: (taskId: string) => void;
 }
 
-export function TaskTable({ tasks, onSelect, onDelete }: ITaskTableProps) {
+export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
     const totalCreatedTasks = tasks.length;
     const totalDoneTasks = tasks.filter(task => task.isDone).length;
 
