@@ -39,7 +39,6 @@ function App() {
   const [tasks, setTasks] = useState<ITask[]>(sortByIsDoneAndDate(tasksMock));
 
   function sortByIsDoneAndDate(tasks: ITask[]) {
-    console.log(tasks);
     return tasks.sort((a, b) => {
       return Number(a.isDone) - Number(b.isDone) || b.createdAt.getTime() - a.createdAt.getTime();
     })
