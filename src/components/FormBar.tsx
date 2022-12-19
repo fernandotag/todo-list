@@ -13,10 +13,11 @@ export function FormBar({onCreate}: IFormBarProps) {
 
     function handleCrateNewTask(event: FormEvent) {
         event.preventDefault();
-        const newTask = {
+        const newTask: ITask = {
             id: uuidv4(),
             title: newTaskTitle,
             isDone: false,
+            createdAt: new Date
         };
 
         onCreate(newTask);
