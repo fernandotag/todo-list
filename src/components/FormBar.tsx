@@ -39,10 +39,10 @@ export function FormBar({onCreate}: IFormBarProps) {
                 required
                 value={newTaskTitle}
                 onInvalid={handleNewTaskTitleInvalid}
-                placeholder='Adicione uma nova tarefa'
+                placeholder='Add a new task'
             />
             <button type="submit" >
-                <span>Criar</span>
+                <span>Create</span>
                 <Plus size={15} weight="bold" className={styles.plusIcon} />
             </button>
         </form>
