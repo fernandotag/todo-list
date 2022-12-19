@@ -29,11 +29,11 @@ export function TaskTable({tasks, onSelect, onDelete}: ITaskTableProps) {
                     <th colSpan={3}>
                         <div>
                             <div>
-                                <span>Tarefas Criadas</span>
+                                <span>Created tasks</span>
                                 <span className={styles.badge}>{totalCreatedTasks}</span>
                             </div>
                             <div>
-                                <span>Concluídas</span>
+                                <span>Done</span>
                                 <span className={styles.badge}>
                                     {`${totalDoneTasks} de ${totalCreatedTasks}`}
                                 </span>
