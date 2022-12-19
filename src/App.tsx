@@ -29,6 +29,12 @@ function App() {
     })
   }
 
+  function createTask(newTask: ITask) {
+    const newTasksArray = [...tasks, newTask];
+
+    setTasks(sortByIsDone(newTasksArray));
+  }
+
   function selectTask(taskId: string) {
     const newTasksArray = tasks.map((task: ITask) => {
       if (task.id === taskId) task.isDone = !task.isDone;
@@ -47,8 +53,12 @@ function App() {
       <Header />
       <div className={styles.wrapper}>
         <main className={styles.main}>
-          <FormBar />
-          <TaskTable tasks={tasks} onSelect={selectTask} onDelete={deleteTask} />
+          <FormBar onCreate={createTask}  />
+          <TaskTable 
+            tasks={tasks} 
+            onSelect={selectTask} 
+            onDelete={deleteTask} 
+          />
         </main>
       </div>
     </div>
