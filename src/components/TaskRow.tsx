@@ -6,6 +6,7 @@ interface ITaskRowProps {
     title: string,
     isDone: boolean
     onSelect: (taskId: string) => void;
+    onDelete: (taskId: string) => void;
 }
 
 export function TaskRow({taskId, title, isDone, onSelect}: ITaskRowProps) {
@@ -24,7 +25,7 @@ export function TaskRow({taskId, title, isDone, onSelect}: ITaskRowProps) {
             >{isDone ? <Check size={24} weight="bold"></Check> : null}</button>
             </td>
             <td className={isDone ? styles.titleSelected : styles.title}>{title}</td>
-            <td><a href="#" className={styles.trash}><Trash size={15} weight="bold"></Trash></a></td>
+            <td><button className={styles.trash}><Trash size={15} weight="bold"></Trash></button></td>
         </tr>
     )
 }
