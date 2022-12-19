@@ -13,18 +13,18 @@ export function FormBar({onCreate}: IFormBarProps) {
 
     function handleCrateNewTask(event: FormEvent) {
         event.preventDefault();
-        const newTask = {
+        const newTask: ITask = {
             id: uuidv4(),
             title: newTaskTitle,
             isDone: false,
+            createdAt: new Date
         };
-
         onCreate(newTask);
         setNewTaskTitle('');
     }
 
     function handleTypeNewTaskTitleText(event: ChangeEvent<HTMLInputElement>) {
-        event.target.setCustomValidity("");
+        event.target.setCustomValidity('');
         setNewTaskTitle(event.target.value);
     }
 
@@ -37,6 +37,7 @@ export function FormBar({onCreate}: IFormBarProps) {
             <input 
                 onChange={(e) => handleTypeNewTaskTitleText(e) }
                 required
+                value={newTaskTitle}
                 onInvalid={handleNewTaskTitleInvalid}
                 placeholder='Adicione uma nova tarefa'
             />
