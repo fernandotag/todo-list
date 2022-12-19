@@ -25,9 +25,6 @@ function App() {
 
   function sortByIsDone(tasks: ITask[]) {
     return tasks.sort((a, b) => {
-      console.log(a.title);
-      console.log(b.title);
-      console.log(Number(a.isDone) - Number(b.isDone));
       return Number(a.isDone) - Number(b.isDone)
     })
   }
